@@ -13,15 +13,33 @@
 
     <div id="marte">
 
+        <h3>Insira o tamanho da malha</h3>
+        <h5>Exemplo: 5, 5</h5>
+        <input type="text" id="entradaPosicaoMalha">
+
+        <br>
+
+        <input type="button" id="marcaMalha" value="Marcar Malha" onclick="marcaMalha()">
+        <input type="button" id="limpaMalha" value="Limpar Malha" onclick="limpaMalha()">
+
+        <br>
+
+        <div id="txtmarcacaoMalha">Realize a marcação inicial da malha!</div>
+
+        <hr>
+
         <h3>Insira a posição inicial da Sonda</h3>
-        <input type="text" id="entradaPosicao">
+        <h5>Exemplo: 1, 2, N</h5>
+        <input type="text" id="entradaPosicaoSonda">
 
         <br>
 
-        <input type="button" id="marcarPosicao" value="Marcar Posição">
-        <input type="button" id="marcarPosicao" value="Limpar Posição">
+        <input type="button" id="marcaPosicao" value="Marcar Posição" onclick="marcarSonda()">
+        <input type="button" id="limpaPosicao" value="Limpar Posição" onclick="limparSonda()">
 
         <br>
+
+        <div id="txtmarcacaoSonda">Realize a marcação inicial da Sonda!</div>
 
         <hr>
 
@@ -33,9 +51,9 @@
 
         <br>
 
-        <input type="button" value="L" id="botaoL">
-        <input type="button" value="R" id="botaoR">
-        <input type="button" value="M" id="botaoM">
+        <input type="button" value="L" id="botaoL" onclick="girarEsquerda()">
+        <input type="button" value="R" id="botaoR" onclick="girarDireita()">
+        <input type="button" value="M" id="botaoM" onclick="moverSonda()">
 
         <br>
 
