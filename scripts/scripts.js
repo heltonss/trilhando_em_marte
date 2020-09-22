@@ -48,7 +48,7 @@ function limparSonda() {
     posicaoInicialSonda = String(posicaoInicialSonda.value)
 
     txtmarcacaoSonda.innerHTML = `Marcação inicial limpa!`
-    document.getElementById('entradaPosicaoSonda').value = '';
+    window.document.getElementById('entradaPosicaoSonda').value = ''
 
     window.document.getElementById("txtmarcacaoSonda").style.color = "red"
 
@@ -56,19 +56,40 @@ function limparSonda() {
 
 function girarEsquerda() {
 
-    window.document.getElementById("sonda").style.transform = "rotate(-90deg)";
+    let left = 'L'
+
+    window.document.getElementById("sonda").style.transform = "rotate(-90deg)"
+    comando = window.document.getElementById("comandosSonda")
+    comando.innerHTML = `${left}`
 
 }
 
 function girarDireita() {
 
-    window.document.getElementById("sonda").style.transform = "rotate(90deg)";
+    let right = 'R'
+
+    window.document.getElementById("sonda").style.transform = "rotate(90deg)"
+    comando = window.document.getElementById("comandosSonda")
+
+    comando.innerHTML = `${right}`
 
 }
 
 function moverSonda() {
 
+    let move = 'M'
 
+    comando = window.document.getElementById("comandosSonda")
+    comando.innerHTML = `${move}`
+
+}
+
+function limparComandosSonda() {
+
+    let comandos = 'Pressione algum comando abaixo'
+
+    let painel = window.document.getElementById("comandosSonda")
+    painel.innerHTML = `${comandos}`
 
 }
 
