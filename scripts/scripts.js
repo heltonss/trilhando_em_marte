@@ -36,7 +36,7 @@ function marcarSonda() {
         window.document.getElementById("txtmarcacaoSonda").style.color = "red"
         alert("Por favor, insira a posição inicial da Sonda conforme exemplo para prosseguir.")
     } else {
-        txtmarcacaoSonda.innerHTML = `Marcação realizada, a posição inicial da Sonda é: ${posicaoInicialSonda}`
+        txtmarcacaoSonda.innerHTML = `Marcação realizada, a posição inicial da Sonda é: ${posicaoInicialSonda.toUpperCase()}`
         window.document.getElementById("txtmarcacaoSonda").style.color = "green"
     }
 
@@ -54,42 +54,31 @@ function limparSonda() {
 
 }
 
-function girarEsquerda() {
+function marcarComandosSonda() {
 
-    let left = 'L'
+    let comandosSonda = window.document.getElementById("comandosSonda")
+    comandosSonda = String(comandosSonda.value)
 
-    window.document.getElementById("sonda").style.transform = "rotate(-90deg)"
-    comando = window.document.getElementById("comandosSonda")
-    comando.innerHTML = `${left}`
-
-}
-
-function girarDireita() {
-
-    let right = 'R'
-
-    window.document.getElementById("sonda").style.transform = "rotate(90deg)"
-    comando = window.document.getElementById("comandosSonda")
-
-    comando.innerHTML = `${right}`
-
-}
-
-function moverSonda() {
-
-    let move = 'M'
-
-    comando = window.document.getElementById("comandosSonda")
-    comando.innerHTML = `${move}`
+    if (comandosSonda == '') {
+        txtComandosSonda.innerHTML = `Marcação nula!`
+        window.document.getElementById("txtComandosSonda").style.color = "red"
+        alert("Por favor, insira comandos conforme exemplo para prosseguir.")
+    } else {
+        txtComandosSonda.innerHTML = `Comandos registrados, os comandos são: ${comandosSonda.toUpperCase()}`
+        window.document.getElementById("txtComandosSonda").style.color = "green"
+    }
 
 }
 
 function limparComandosSonda() {
 
-    let comandos = 'Pressione algum comando abaixo'
+    let comandosSonda = window.document.getElementById("comandosSonda")
+    comandosSonda = String(comandosSonda.value)
 
-    let painel = window.document.getElementById("comandosSonda")
-    painel.innerHTML = `${comandos}`
+    txtComandosSonda.innerHTML = `Comandos limpos!`
+    document.getElementById('comandosSonda').value = '';
+
+    window.document.getElementById("txtComandosSonda").style.color = "red"
 
 }
 

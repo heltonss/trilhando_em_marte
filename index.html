@@ -14,7 +14,7 @@
     <div id="marte">
 
         <h3>Insira o tamanho da malha</h3>
-        <h5>Exemplo: 5, 5</h5>
+        <h5>Exemplo: 5 5</h5>
         <input type="text" id="entradaPosicaoMalha">
 
         <br>
@@ -29,7 +29,7 @@
         <hr>
 
         <h3>Insira a posição inicial da Sonda</h3>
-        <h5>Exemplo: 1, 2, N</h5>
+        <h5>Exemplo: 1 2 N</h5>
         <input type="text" id="entradaPosicaoSonda">
 
         <br>
@@ -44,6 +44,7 @@
         <hr>
 
         <h3 id="texto">Controle a direção da Sonda</h3>
+        <h5>Exemplo: LMRMLMM</h5>
 
         <br>
 
@@ -51,16 +52,23 @@
 
         <br>
 
-        <div id="comandosSonda">Pressione algum comando abaixo</div>
+        <input type="text" id="comandosSonda"></input>
 
-        <input type="button" value="L" id="botaoL" onclick="girarEsquerda()">
-        <input type="button" value="R" id="botaoR" onclick="girarDireita()">
-        <input type="button" value="M" id="botaoM" onclick="moverSonda()">
+        <br>
+
+        <input type="button" value="Marcar Comandos" id="setComandos" onclick="marcarComandosSonda()">
         <input type="button" value="Limpar Comandos" id="cleanComandos" onclick="limparComandosSonda()">
 
         <br>
 
-        <input type="button" value="Posição Final da Sonda" id="posicaoAtual">
+        <div id="txtComandosSonda">Insira comandos para a Sonda!</div>
+
+        <hr>
+
+        <h3>Posição final da Sonda</h3>
+
+        <input type="button" value="Posição Final" id="saidaSonda">
+        <input type="button" value="Limpar" id="limparSaidaSonda">
 
         <div id="painelResultado"></div>
 
