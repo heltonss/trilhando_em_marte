@@ -23,6 +23,15 @@ function marcaMalha() {
     xMalha = malhaInicial.charAt(0)
     yMalha = malhaInicial.charAt(2)
 
+    if (xMalha > 8 || yMalha > 8) {
+        alert("Malha maior que o permitido! Por favor, insira o tamanho da malha conforme exemplo para prosseguir.")
+        txtmarcacaoMalha.innerHTML = `Marcação inválida!`
+        window.document.getElementById("txtmarcacaoMalha").style.color = "red"
+
+        let malhaInicial = window.document.getElementById("entradaPosicaoMalha")
+        document.getElementById('entradaPosicaoMalha').value = '';
+    }
+
 }
 
 function limpaMalha() {
