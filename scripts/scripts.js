@@ -159,6 +159,22 @@ function marcarComandosSonda() {
                     case -1:
                         xSonda--
                         break
+
+                    case -4:
+                        xSonda++
+                        break
+
+                    case -5:
+                        ySonda--
+                        break
+
+                    case 4:
+                        ySonda++
+                        break
+
+                    case 5:
+                        xSonda++
+                        break
                 }
                 break
         }
@@ -231,6 +247,14 @@ function saidaPosicaoSonda() {
             break
 
         case -3:
+            direcaoSonda = 'L'
+            break
+
+        case -4:
+            direcaoSonda = 'N'
+            break
+
+        case 5:
             direcaoSonda = 'L'
             break
     }
