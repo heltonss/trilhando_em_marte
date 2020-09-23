@@ -266,14 +266,19 @@ function saidaPosicaoSonda() {
     }
 
     let posicaoFinal = window.document.getElementById("painelResultado")
-    posicaoFinal.innerHTML = `${xSonda} ${ySonda} ${direcaoSonda}`
+
+    if (xSonda == undefined) {
+        posicaoFinal.innerHTML = ``
+        alert("Insira a marcação inicial da malha, a posição inicial da Sonda e seus comandos!")
+    } else {
+        posicaoFinal.innerHTML = `${xSonda} ${ySonda} ${direcaoSonda}`
+    }
 
 }
 
 function limparSaidaSonda() {
 
-    alert("Teste")
-
-    window.document.getElementById('painelResultado').value = ''
+    let painel = window.document.getElementById("painelResultado")
+    painel.innerHTML = ``
 
 }
