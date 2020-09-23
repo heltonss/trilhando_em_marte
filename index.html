@@ -30,6 +30,7 @@
 
         <h3>Insira a posição inicial da Sonda</h3>
         <h5>Exemplo: 1 2 N</h5>
+        <h5>Valores aceitáveis para a direção: N, S, L e O</h5>
         <input type="text" id="entradaPosicaoSonda">
 
         <br>
@@ -67,14 +68,14 @@
 
         <h3>Posição final da Sonda</h3>
 
-        <input type="button" value="Posição Final" id="saidaSonda">
-        <input type="button" value="Limpar" id="limparSaidaSonda">
+        <input type="button" value="Posição Final" id="saidaSonda" onclick="saidaPosicaoSonda()">
+        <input type="button" value="Limpar" id="limparSaidaSonda" onclick="limparSaidaSonda()">
 
         <div id="painelResultado"></div>
 
     </div>
 
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/scripts.js "></script>
 
 </body>
 
