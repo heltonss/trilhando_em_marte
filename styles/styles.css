@@ -4,7 +4,7 @@
 }
 
 body {
-    background: gray url('images/fundo.jpg');
+    background-color: gray;
 }
 
 #marte {
