@@ -28,7 +28,6 @@ function marcaMalha() {
         txtmarcacaoMalha.innerHTML = `Marcação inválida!`
         window.document.getElementById("txtmarcacaoMalha").style.color = "red"
 
-        let malhaInicial = window.document.getElementById("entradaPosicaoMalha")
         document.getElementById('entradaPosicaoMalha').value = '';
     }
 
