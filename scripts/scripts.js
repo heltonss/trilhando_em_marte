@@ -5,7 +5,6 @@ let yMalha
 let xSonda
 let ySonda
 let direcaoSonda
-let comandosdaSonda
 
 function marcaMalha() {
 
@@ -116,7 +115,6 @@ function marcarComandosSonda() {
 
     for (let i = 0; i < comandosSonda.length; i++) {
         let c = comandosSonda.charAt(i).toUpperCase()
-            //console.log(c)
 
         switch (c) {
             case 'L':
@@ -161,7 +159,7 @@ function marcarComandosSonda() {
                         break
 
                     case -4:
-                        xSonda++
+                        ySonda++
                         break
 
                     case -5:
@@ -175,9 +173,17 @@ function marcarComandosSonda() {
                     case 5:
                         xSonda++
                         break
+
+                    case 6:
+                        ySonda++
+                        break
+
+                    case -6:
+                        ySonda--
+                        break
                 }
-                break
         }
+
     }
 
 }
