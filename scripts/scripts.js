@@ -280,7 +280,7 @@ function saidaPosicaoSonda() {
         alert("Insira a marcação inicial da malha, a posição inicial da Sonda e seus comandos!")
     } else if (xMalha == null || yMalha == null) {
         alert("Defina o tamanho da malha a ser explorada!")
-    } else if (xSonda > xMalha || ySonda > yMalha) {
+    } else if (xSonda > xMalha || ySonda > yMalha || xSonda < 0 || ySonda < 0) {
         alert("Você mandou a sonda para fora de Marte :(")
     } else {
         posicaoFinal.innerHTML = `${xSonda} ${ySonda} ${direcaoSonda}`
